@@ -1,0 +1,56 @@
+//Burger   start  =======================================================================
+
+// <button type="button" class="icon-menu"><span></span></button>
+
+.icon-menu {
+   display: none;
+   // display: block;
+   margin: 0px;
+   padding: 0px;
+   border: none;
+   background-color: transparent;
+   position: relative;
+   flex: 0 0 30px;
+   height: 20px;
+   cursor: pointer;
+   z-index: 5;
+   width: 30px;
+   margin-right: 10px;
+}
+.icon-menu span,
+.icon-menu::before,
+.icon-menu::after {
+   transition: all 0.3s ease 0s;
+   left: 0px;
+   position: absolute;
+   width: 100%;
+   height: 3px;
+   border-radius: 1px;
+   background-color: #4a4a4a;
+}
+.icon-menu::before,
+.icon-menu::after {
+   content: "";
+}
+.icon-menu::before {
+   top: 0px;
+}
+.icon-menu::after {
+   bottom: 0px;
+}
+.icon-menu span {
+   top: 50%;
+   transform: scale(1) translate(0px, -50%);
+}
+.icon-menu.menu-open span {
+   transform: scale(0) translate(0px, -50%);
+}
+.menu-open.icon-menu::before {
+   top: 50%;
+   transform: rotate(-45deg) translate(0px, -50%);
+}
+.menu-open.icon-menu::after {
+   bottom: 45%;
+   transform: rotate(45deg) translate(0px, 50%);
+}
+//Burger   end  ==================================================================================
